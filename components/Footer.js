@@ -24,7 +24,7 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <p className="text-gray-600 dark:text-gray-400">Email: contact@famalink.com</p>
-            <p className="text-gray-600 dark:text-gray-400">Tél: +33 1 23 45 67 89</p>
+            <p className="text-gray-600 dark:text-gray-400">Tél: +33 6 59 98 56 81</p>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Suivez-nous</h4>
