@@ -1,4 +1,6 @@
+'use client'
 import React from 'react';
+import { motion } from 'framer-motion';
 import { PhoneCall, Radio, Monitor, Wifi } from 'lucide-react';
 
 const expertiseAreas = [
@@ -8,24 +10,66 @@ const expertiseAreas = [
   { title: "Alerte & Surveillance", icon: Wifi, description: "Maîtriser les possibilités que nous offre le digital pour savoir quoi mettre en avant et comment le faire." }
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100
+    }
+  }
+};
+
 export default function ExpertiseSection() {
   return (
-    <section id="expertise" className="py-16 bg-gradient-to-br from-blue-600 to-purple-700 text-white">
+    <section id="expertise" className="py-24 bg-gradient-to-br from-blue-600 to-blue-800 text-white overflow-hidden">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">Notre expertise</h2>
-        <p className="text-xl mb-12 text-center max-w-3xl mx-auto">
-          FamaLink™ accompagne les dirigeants, les personnalités et les particuliers dans 
-          la valorisation de leur identité numérique et la promotion de leurs activités en ligne.
-        </p>
-        <div className="grid md:grid-cols-2 gap-8">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl font-bold mb-6">Notre expertise</h2>
+          <p className="text-xl max-w-3xl mx-auto text-blue-100">
+            FamaLink™ accompagne les dirigeants, les personnalités et les particuliers dans 
+            la valorisation de leur identité numérique et la promotion de leurs activités en ligne.
+          </p>
+        </motion.div>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid md:grid-cols-2 gap-8"
+        >
           {expertiseAreas.map((area, index) => (
-            <div key={area.title} className="bg-white/10 p-6 rounded-lg backdrop-filter backdrop-blur-md">
-              <area.icon className="w-12 h-12 mb-4 text-blue-300" />
-              <h3 className="text-xl font-semibold mb-2">{area.title}</h3>
-              <p className="text-sm text-blue-100">{area.description}</p>
-            </div>
+            <motion.div
+              key={area.title}
+              variants={itemVariants}
+              className="bg-white/10 p-8 rounded-xl backdrop-filter backdrop-blur-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
+            >
+              <div className="flex items-center mb-6">
+                <div className="bg-blue-400 p-3 rounded-full mr-4 group-hover:bg-white group-hover:text-blue-600 transition-all duration-300">
+                  <area.icon className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-semibold">{area.title}</h3>
+              </div>
+              <p className="text-blue-100 group-hover:text-white transition-colors duration-300">{area.description}</p>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

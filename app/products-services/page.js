@@ -79,10 +79,9 @@ const Card = ({ title, description, icon, bgColor, emailSubject, emailBody }) =>
 
 export default function ProductsResourcesSection() {
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-grainy opacity-5"></div>
-      <div className="container relative z-10">
-        <motion.div
+      <div className="container relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">  <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}

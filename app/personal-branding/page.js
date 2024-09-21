@@ -41,24 +41,26 @@ export default function PersonalBrandingPage() {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-white to-blue-50 dark:from-gray-900 dark:to-blue-900 min-h-screen">
-      <header className="py-20 text-center bg-blue-600 text-white">
-        <motion.h1 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-4xl md:text-5xl font-bold mb-4"
-        >
-          Personal Branding Stratégiste
-        </motion.h1>
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-xl max-w-2xl mx-auto"
-        >
-          Démarquez-vous, surtout par conviction. Maîtrisez l&apos;art du Personal Branding avec notre approche French Touch.
-        </motion.p>
+    <div className="bg-gradient-to-b from-gray-100 via-blue-100 to-gray-100 dark:from-gray-900 dark:via-blue-900 dark:to-gray-900 min-h-screen">
+      <header className="py-20 text-center bg-gradient-to-r from-gray-100 via-blue-100 to-gray-100 dark:from-gray-900 dark:via-blue-900 dark:to-gray-900 w-fulltext-white relative overflow-hidden">
+        <div className="relative z-10">
+          <motion.h1 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-4xl md:text-5xl mt-20 font-bold mb-4"
+          >
+            Personal Branding Stratégiste
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-xl max-w-2xl mx-auto"
+          >
+            Démarquez-vous, surtout par conviction. Maîtrisez l&apos;art du Personal Branding avec notre approche French Touch.
+          </motion.p>
+        </div>
       </header>
 
       <section className="py-16 bg-white dark:bg-gray-800">
@@ -119,21 +121,21 @@ export default function PersonalBrandingPage() {
       </section>
 
       <section className="py-16 bg-blue-600 dark:bg-blue-800 text-white">
-  <div className="container mx-auto px-4 text-center">
-    <h2 className="text-3xl font-semibold mb-8">Prêt à transformer votre image professionnelle ?</h2>
-    <motion.a
-      href="https://calendly.com/famalink/45min"
-      target="_blank"
-      rel="noopener noreferrer"
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      className="inline-flex items-center bg-white text-blue-600 px-8 py-3 rounded-full font-semibold text-lg hover:bg-blue-100 transition-colors duration-300"
-    >
-      Réserver votre formation
-      <ArrowRight className="ml-2 h-5 w-5" />
-    </motion.a>
-  </div>
-</section>
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-semibold mb-8">Prêt à transformer votre image professionnelle ?</h2>
+          <motion.a
+            href="https://calendly.com/famalink/45min"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center bg-white text-blue-600 px-8 py-3 rounded-full font-semibold text-lg hover:bg-blue-100 transition-colors duration-300"
+          >
+            Réserver votre formation
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </motion.a>
+        </div>
+      </section>
 
       <section className="py-16">
         <div className="container mx-auto px-4">

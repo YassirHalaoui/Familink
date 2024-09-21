@@ -10,7 +10,7 @@ import VideoSection from '@/components/VideoSection';
 export default function Home() {
   return (
     <main className="overflow-hidden">
-      <HeroSection />
+        <HeroSection />
       <ServicesSection />
       <VideoSection />
       <PricingSection />

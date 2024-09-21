@@ -18,7 +18,7 @@ const PricingSection = () => {
         "Support par email"
       ],
       color: "bg-blue-100 dark:bg-blue-900",
-      buttonColor: "bg-blue-500 hover:bg-blue-600"
+      buttonColor: "bg-blue-500 hover:bg-blue-600 text-white"
     },
     {
       title: "Individuel",
@@ -33,7 +33,7 @@ const PricingSection = () => {
         "Support prioritaire"
       ],
       color: "bg-purple-100 dark:bg-purple-900",
-      buttonColor: "bg-purple-500 hover:bg-purple-600",
+      buttonColor: "bg-purple-500 hover:bg-purple-600 text-white",
       featured: true
     },
     {
@@ -49,7 +49,7 @@ const PricingSection = () => {
         "Assistance personnalisée"
       ],
       color: "bg-green-100 dark:bg-green-900",
-      buttonColor: "bg-green-500 hover:bg-green-600"
+      buttonColor: "bg-green-500 hover:bg-green-600 text-white"
     },
   ];
 
@@ -95,7 +95,7 @@ const PricingSection = () => {
                   href="https://calendly.com/famalink/45min"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-full py-3 px-4 rounded-lg text-white font-semibold transition-colors duration-200 ${plan.buttonColor} text-center`}
+                  className={`w-full py-3 px-4 rounded-lg font-semibold transition-colors duration-200 ${plan.buttonColor} text-center`}
                 >
                   Je prends un rendez-vous
                 </a>
