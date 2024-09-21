@@ -11,6 +11,8 @@ const menuItems = [
   { name: 'Contact', path: '/#contact' },
   { name: 'Produits', path: '/products-services' },
   { name: 'Personal Branding', path: '/personal-branding' },
+  { name: 'Blog', path: '/blog' },
+
 ];
 
 export default function Header() {
