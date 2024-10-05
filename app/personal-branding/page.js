@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { UserPlus, Target, Award, BarChart, Book, Users, Briefcase, ArrowRight, Mail, Linkedin } from 'lucide-react';
+import PersonalBrandingSection from '@/components/PersonalBrandingSection';
 
 export default function PersonalBrandingPage() {
   const strategies = [
@@ -42,48 +43,7 @@ export default function PersonalBrandingPage() {
 
   return (
     <div className="bg-gradient-to-b from-gray-100 via-blue-100 to-gray-100 dark:from-gray-900 dark:via-blue-900 dark:to-gray-900 min-h-screen">
-      <header className="py-20 text-center bg-gradient-to-r from-gray-100 via-blue-100 to-gray-100 dark:from-gray-900 dark:via-blue-900 dark:to-gray-900 w-fulltext-white relative overflow-hidden">
-        <div className="relative z-10">
-          <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-4xl md:text-5xl mt-20 font-bold mb-4"
-          >
-            Personal Branding Stratégiste
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xl max-w-2xl mx-auto"
-          >
-            Démarquez-vous, surtout par conviction. Maîtrisez l&apos;art du Personal Branding avec notre approche French Touch.
-          </motion.p>
-        </div>
-      </header>
-
-      <section className="py-16 bg-white dark:bg-gray-800">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-semibold text-center mb-12 text-gray-800 dark:text-white">Notre approche stratégique</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {strategies.map((strategy, index) => (
-              <motion.div 
-                key={strategy.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-blue-50 dark:bg-blue-900 p-6 rounded-lg shadow-md"
-              >
-                <strategy.icon className="w-12 h-12 text-blue-600 dark:text-blue-400 mb-4" />
-                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">{strategy.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300">{strategy.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      <PersonalBrandingSection/>
       <section className="py-16 bg-gray-100 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center">

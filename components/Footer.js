@@ -5,7 +5,7 @@ import { Twitter, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 const menuItems = [
   { name: 'Expertise', path: '/#expertise' },
   { name: 'Contact', path: '/#contact' },
-  { name: 'Produits', path: '/products-services' },
+  { name: 'Services', path: '/products-services' },
   { name: 'Personal Branding', path: '/personal-branding' },
 ];
 
