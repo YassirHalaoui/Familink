@@ -24,7 +24,7 @@ export default function AuditReputationPage() {
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
               <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
-                Notre offre Audit Reputation™ est idéale pour les particuliers qui veulent pouvoir effectuer différents contrôles et la réalisation de benchmarks de leur identité numérique. Tous les problèmes communs affectant la réputation en ligne sont examinés. C'est une approche développée par Famalink, se focalisant sur les points les plus importants de votre identité numérique.
+                Notre offre Audit Reputation™ est idéale pour les particuliers qui veulent pouvoir effectuer différents contrôles et la réalisation de benchmarks de leur identité numérique. Tous les problèmes communs affectant la réputation en ligne sont examinés. C&quot;est une approche développée par Famalink, se focalisant sur les points les plus importants de votre identité numérique.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300">
                 Audit Reputation™ est un outil au cœur même de votre stratégie digitale pour faire face à la dégradation de votre image de marque.
@@ -50,7 +50,7 @@ export default function AuditReputationPage() {
             Analyser votre image de marque personnelle en ligne
           </h2>
           <p className="text-lg text-center text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-            Protéger la réputation de votre <strong>marque personnelle en ligne</strong> ; analyser et réagir aux conversations sur votre marque dans la presse, sur les réseaux sociaux, les forums et les plateformes d'avis. Pour répondre au mieux à ces problématiques, nous nous tenons à votre disposition afin d'en savoir plus sur vos besoins spécifiques.
+            Protéger la réputation de votre <strong>marque personnelle en ligne</strong> ; analyser et réagir aux conversations sur votre marque dans la presse, sur les réseaux sociaux, les forums et les plateformes d&quot;avis. Pour répondre au mieux à ces problématiques, nous nous tenons à votre disposition afin d&apos;en savoir plus sur vos besoins spécifiques.
           </p>
         </motion.div>
 

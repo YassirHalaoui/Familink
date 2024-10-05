@@ -71,7 +71,7 @@ export default function PersonalBrandingSection() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="text-lg italic max-w-4xl mx-auto"
           >
-            "Nous sommes tous différents et uniques, porteurs d'une spécificité qui cherche à s'exprimer, à être visible, à se raconter. L'enjeu est donc de trouver cette singularité qui réclame notre attention et a besoin d'espace pour exister pleinement. C'est l'expression d'une quête sincère d'authenticité, de cohérence, d'alignement."
+            &quot;Nous sommes tous différents et uniques, porteurs d&apos;une spécificité qui cherche à s&apos;exprimer, à être visible, à se raconter. L&apos;enjeu est donc de trouver cette singularité qui réclame notre attention et a besoin d&apos;espace pour exister pleinement. C&apos;est l&apos;expression d&apos;une quête sincère d&apos;authenticité, de cohérence, d&apos;alignement.&quot;
           </motion.blockquote>
         </div>
       </header>
@@ -115,7 +115,7 @@ export default function PersonalBrandingSection() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-xl text-center text-gray-600 dark:text-gray-300 mb-12"
             >
-              L'accompagnement en Personal Branding vise un double objectif : vous aider à développer votre connaissance approfondie et transformer vos particularités en atouts indiscriminables sur le marché.
+              L&apos;accompagnement en Personal Branding vise un double objectif : vous aider à développer votre connaissance approfondie et transformer vos particularités en atouts indiscriminables sur le marché.
             </motion.p>
             <div className="grid md:grid-cols-3 gap-8">
               {steps.map((step, index) => (
@@ -156,7 +156,7 @@ export default function PersonalBrandingSection() {
             className="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8"
           >
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              FAMALINK™ s'appuie sur la REACH PERSONAL BRANDING, référence mondiale pour la gestion efficace et durable d'une marque forte et personnelle en trois étapes : Découvrir, Communiquer, et Rayonner.
+              FAMALINK™ s&apos;appuie sur la REACH PERSONAL BRANDING, référence mondiale pour la gestion efficace et durable d&apos;une marque forte et personnelle en trois étapes : Découvrir, Communiquer, et Rayonner.
             </p>
             <p className="text-gray-600 dark:text-gray-300">
               La méthode Reach Inc. est reconnue mondialement pour son approche innovante du Personal Branding, offrant des stratégies concrètes pour développer et maintenir une présence professionnelle impactante.

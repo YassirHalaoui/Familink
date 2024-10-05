@@ -100,11 +100,11 @@ export default function ProductsResourcesSection() {
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
               <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
-                Nous vous proposons un ensemble d'outils pour faire décoller votre marque.
+                Nous vous proposons un ensemble d&quot;outils pour faire décoller votre marque.
                 Bilan de visibilité pour définir les contours stratégiques de votre marque personnelle ; 360 Brand pour savoir ce que vos relations professionnelles et personnelles pensent de vous ; Guide de visualisation pour préparer votre marque personnelle dans 5 ans ; Brand Social pour mieux positionner votre marque personnelle sur les réseaux sociaux ; ou encore coaching personnalisé…
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300">
-                Choisissez l'outil qui vous ressemble pour démarrer votre programme sur-mesure.
+                Choisissez l&apos;outil qui vous ressemble pour démarrer votre programme sur-mesure.
               </p>
             </div>
             <div className="md:w-1/2">
