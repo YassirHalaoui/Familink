@@ -88,8 +88,14 @@ export default function ProductsResourcesSection() {
           transition={{ duration: 0.5 }}
           className="text-5xl font-bold mb-12 text-center text-gray-800 dark:text-white"
         >
-          Branding Reputation™
+         Bienvenu sur le  360 Brand 
+
         </motion.h1>
+        <motion.h2 initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }} 
+          className="text-2xl font-bold mb-12 text-center text-gray-800 dark:text-white">
+            un outil signé Personal Branding France</motion.h2>
         
         <motion.div
           initial={{ opacity: 0, y: 20 }}

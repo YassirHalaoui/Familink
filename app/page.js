@@ -11,7 +11,6 @@ export default function Home() {
   return (
     <main className="overflow-hidden">
       <HeroSection />
-      <ServicesSection />
       <ExpertiseSection />
       <EmployeeAdvocacySection />
       <LeadershipSection />

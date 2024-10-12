@@ -45,8 +45,8 @@ export default function ContactSection() {
             <div className="space-y-6">
               {[
                 { icon: Mail, text: "contact@famalink.com" },
-                { icon: Phone, text: "+33 6 59 98 56 81" },
-                { icon: MapPin, text: "123 Rue de la République, 75001 Paris" }
+                { icon: Phone, text: "+212 7 64 04 25 86" },
+                { icon: MapPin, text: "N4 Immeuble, 38 Rue Tariq Bnou Ziad ,Marrakesh 40000,Maroc" }
               ].map((item, index) => (
                 <motion.div
                   key={index}

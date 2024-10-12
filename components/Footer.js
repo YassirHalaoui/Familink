@@ -65,12 +65,12 @@ export default function Footer() {
                 <li className="flex items-center text-gray-600 dark:text-gray-400">
                   <Phone size={16} className="mr-2" />
                   <a href="tel:+33659985681" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-                    +33 6 59 98 56 81
+                    +212 7 64 04 25 86
                   </a>
                 </li>
                 <li className="flex items-center text-gray-600 dark:text-gray-400">
                   <MapPin size={16} className="mr-2" />
-                  <span>123 Rue de la République, 75001 Paris</span>
+                  <span>N4 Immeuble, 38 Rue Tariq Bnou Ziad ,Marrakesh 40000,Maroc</span>
                 </li>
               </ul>
             </div>

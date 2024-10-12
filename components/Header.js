@@ -11,13 +11,12 @@ const menuItems = [
   { name: 'Accueil', path: '/' },
   { name: 'Brand Solution', path: '/brand-reputation', subItems: [
     { name: 'Brand E-Reputation', path: '/notre-expertise' },
-    { name: 'Perspnal Branding', path: '/personal-branding' },
-    { name: 'Audit E-Reputation', path: '/audit-reputation' },
+    { name: 'Personal Branding', path: '/personal-branding' },
     { name: 'Brand 360', path: '/brand-reputation' },
   ]},
-  { name: 'Contact', path: '/#contact' },
+  { name: 'Contact', path: '/contact' },
   { name: 'Blog', path: '/blog' },
-  { name: 'My Account', path: '/account' },
+  { name: 'Mon Compte', path: '/account' },
 
 ];
 

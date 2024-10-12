@@ -1,5 +1,6 @@
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Compass, Target, Feather, Eye, Megaphone, Network } from 'lucide-react';
+import { Compass, Target, Feather, Eye, Megaphone, Network, Quote } from 'lucide-react';
 
 const strategies = [
   { 
@@ -23,60 +24,63 @@ const strategies = [
     description: "Définir une stratégie de visibilité pour vous démarquer de la concurrence et rayonner sur le marché."
   }
 ];
+
 const steps = [
-    {
-      title: "Découvrir",
-      subtitle: "Clarifier votre raison d'être",
-      description: "D'abord, nous formalisons ce à quoi vous aspirez, tant sur le plan professionnel que sur le plan personnel.",
-      icon: Compass
-    },
-    {
-      title: "Communiquer",
-      subtitle: "Définir une stratégie de visibilité",
-      description: "Ensuite, nous identifions les particularités qui vous démarquent de la concurrence.",
-      icon: Megaphone
-    },
-    {
-      title: "Rayonner",
-      subtitle: "Créer de nouvelles connexions",
-      description: "Nous définissons des stratégies ciblées pour présenter au mieux vos particularités et rendre votre profil attractif.",
-      icon: Network
-    }
-  ];
+  {
+    title: "Découvrir",
+    subtitle: "Clarifier votre raison d'être",
+    description: "D'abord, nous formalisons ce à quoi vous aspirez, tant sur le plan professionnel que sur le plan personnel.",
+    icon: Compass
+  },
+  {
+    title: "Communiquer",
+    subtitle: "Définir une stratégie de visibilité",
+    description: "Ensuite, nous identifions les particularités qui vous démarquent de la concurrence.",
+    icon: Megaphone
+  },
+  {
+    title: "Rayonner",
+    subtitle: "Créer de nouvelles connexions",
+    description: "Nous définissons des stratégies ciblées pour présenter au mieux vos particularités et rendre votre profil attractif.",
+    icon: Network
+  }
+];
 
 export default function PersonalBrandingSection() {
   return (
-    <div className=" mt-20 bg-gradient-to-b from-gray-100 via-blue-100 to-gray-100 dark:from-gray-900 dark:via-blue-900 dark:to-gray-900 min-h-screen">
-      <header className="py-20 text-center bg-gradient-to-r from-gray-100 via-blue-100 to-gray-100 dark:from-gray-900 dark:via-blue-900 dark:to-gray-900 w-full text-gray-800 dark:text-white relative overflow-hidden">
-        <div className="relative z-10 container mx-auto px-4">
+    <div className="bg-gradient-to-b mt-18  from-gray-100 via-blue-100 to-gray-100 dark:from-gray-900 dark:via-blue-900 dark:to-gray-900">
+      <section className="py-20 text-center">
+        <div className="container mx-auto px-4">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-5xl font-bold mb-4"
+            className="text-4xl md:text-5xl font-bold mb-4 text-gray-800 dark:text-white"
           >
             Le Personal Branding, en bref...
           </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xl max-w-3xl mx-auto mb-8"
-          >
-            Démarquez-vous, surtout par conviction
-          </motion.p>
-          <motion.blockquote
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+          
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-lg italic max-w-4xl mx-auto"
+            className="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8 max-w-4xl mx-auto relative"
           >
-            &quot;Nous sommes tous différents et uniques, porteurs d&apos;une spécificité qui cherche à s&apos;exprimer, à être visible, à se raconter. L&apos;enjeu est donc de trouver cette singularité qui réclame notre attention et a besoin d&apos;espace pour exister pleinement. C&apos;est l&apos;expression d&apos;une quête sincère d&apos;authenticité, de cohérence, d&apos;alignement.&quot;
-          </motion.blockquote>
+            <Quote className="absolute top-4 left-4 text-blue-200 dark:text-blue-700 h-12 w-12 opacity-50 m-15" />
+            <blockquote className="text-lg italic text-gray-700 dark:text-gray-300 mb-6 relative z-10">
+              &quot;Nous sommes tous différents et uniques, porteurs d&apos;une spécificité qui cherche à s&apos;exprimer, à être visible, à se raconter. L&apos;enjeu est donc de trouver cette singularité qui réclame notre attention et a besoin d&apos;espace pour exister pleinement. C&apos;est l&apos;expression d&apos;une quête sincère d&apos;authenticité, de cohérence, d&apos;alignement.&quot;
+            </blockquote>
+            <footer className="text-right">
+              <p className="not-italic">
+                <span className="font-semibold text-blue-600 dark:text-blue-400">Béatrice Cuvelier</span>
+                <span className="block text-sm text-gray-500 dark:text-gray-400">Fondatrice de Personal Branding France</span>
+              </p>
+            </footer>
+          </motion.div>
         </div>
-      </header>
+      </section>
 
-      <section className="py-16 bg-white dark:bg-gray-800">
+      <section className="py-20 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-semibold text-center mb-12 text-gray-800 dark:text-white">Notre approche stratégique</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -88,17 +92,16 @@ export default function PersonalBrandingSection() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-blue-50 dark:bg-blue-900 p-6 rounded-lg shadow-md"
               >
-                <strategy.icon className="w-12 h-12 text-blue-600 dark:text-blue-400 mb-4" />
-                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">{strategy.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300">{strategy.description}</p>
+                <strategy.icon className="w-12 h-12 text-blue-600 dark:text-blue-400 mb-4 mx-auto" />
+                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white text-center">{strategy.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300 text-center">{strategy.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-     
-      <section className="py-20 bg-white dark:bg-gray-800">
+      <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -124,7 +127,7 @@ export default function PersonalBrandingSection() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-                  className="bg-blue-50 dark:bg-blue-900 rounded-lg shadow-lg overflow-hidden"
+                  className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"
                 >
                   <div className="p-6">
                     <step.icon className="w-16 h-16 text-blue-600 dark:text-blue-400 mb-4 mx-auto" />
@@ -139,7 +142,7 @@ export default function PersonalBrandingSection() {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50 dark:bg-gray-900">
+      <section className="py-20 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -153,7 +156,7 @@ export default function PersonalBrandingSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8"
+            className="max-w-4xl mx-auto bg-blue-50 dark:bg-blue-900 rounded-lg shadow-lg p-8"
           >
             <p className="text-gray-600 dark:text-gray-300 mb-6">
               FAMALINK™ s&apos;appuie sur la REACH PERSONAL BRANDING, référence mondiale pour la gestion efficace et durable d&apos;une marque forte et personnelle en trois étapes : Découvrir, Communiquer, et Rayonner.
@@ -164,7 +167,6 @@ export default function PersonalBrandingSection() {
           </motion.div>
         </div>
       </section>
-      
     </div>
   );
 }
