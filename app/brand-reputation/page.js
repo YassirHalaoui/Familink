@@ -135,21 +135,7 @@ export default function ProductsResourcesSection() {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 mb-16 overflow-hidden"
-        >
-          <h2 className="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-white">
-            Ressources & outils
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {resources.map((resource, index) => (
-              <Card key={index} {...resource} />
-            ))}
-          </div>
-        </motion.div>
+       
       </div>
     </div>
   );

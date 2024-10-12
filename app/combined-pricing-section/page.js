@@ -53,7 +53,7 @@ const CombinedPricingSection = () => {
       buttonColor: "bg-white text-orange-600 hover:bg-orange-50"
     },
   ];
-
+  
   return (
     <section id="pricing" className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto px-4">

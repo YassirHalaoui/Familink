@@ -3,10 +3,13 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { UserPlus, Target, Award, BarChart, Book, Users, Briefcase, ArrowRight, Mail, Linkedin } from 'lucide-react';
+import { UserPlus, Target, Award, BarChart, Book, Users, Briefcase, ArrowRight, Mail, Linkedin, Sparkles } from 'lucide-react';
 import PersonalBrandingSection from '@/components/PersonalBrandingSection';
+import Link from 'next/link';
+import LeadershipCardsSection from '@/components/LeadershipCardsSection';
+import VideoSection from '@/components/VideoSection';
 
-export default function PersonalBrandingPage() {
+export default function PersonalBrandingPage() {  
   const strategies = [
     { icon: UserPlus, title: "Identité unique", description: "Définissez votre signature professionnelle distinctive." },
     { icon: Target, title: "Positionnement ciblé", description: "Identifiez votre niche et votre audience idéale." },
@@ -40,45 +43,82 @@ export default function PersonalBrandingPage() {
       image: "/images/Christine.jpg"
     }
   ];
-
+  const cards = [
+    {
+      title: "Leader",
+      subtitle: "Réveillez le leader qui sommeille en vous",
+      content: "Il est triste de voir combien de personnes passent à côté de leur destinée, faute de n'être pas parvenues à exprimer leur potentiel. Celles et ceux qui réussissent dans la vie, et que l'on appelle les leaders, se distinguent par une profonde connaissance d'eux-mêmes en tant qu'individus."
+    },
+    {
+      title: "Confiance",
+      subtitle: "Avancez avec sérénité",
+      content: "« Avant de pouvoir diriger les autres, il faut savoir se diriger soi-même ». C'est bien connu : ce qui fait un bon manager va bien au-delà de ses seules compétences techniques. Il s'agit d'être avant tout un leader inspirant, c'est-à-dire une personne capable de porter ses équipes par des idées fortes et une communication adéquate."
+    },
+    {
+      title: "Équilibre",
+      subtitle: "Vie privée et succès professionnel",
+      content: "L'épanouissement personnel est une intime combinaison entre une vie privée réussie et une vie professionnelle accomplie. Aussi est-il important d'accorder à chacun de ces deux aspects une attention particulière."
+    }
+  ];
+  
   return (
     <div className="bg-gradient-to-b from-gray-100 via-blue-100 to-gray-100 dark:from-gray-900 dark:via-blue-900 dark:to-gray-900 min-h-screen">
       <PersonalBrandingSection/>
-      <section className="py-16 bg-gray-100 dark:bg-gray-900">
+      <hr/>
+      <div className="bg-gray-900 text-white py-16">
+      <div className="container mx-auto px-4 ">
+      <Link href="https://williamarruda.com/reach-personal-branding/" target="_blank" rel="noopener noreferrer">
+      <motion.div 
+        className="bg-gray-900 text-white py-16 cursor-pointer hover:bg-gray-800 transition-colors duration-300"
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
+      >
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap items-center">
-            <div className="w-full lg:w-1/2 mb-8 lg:mb-0 relative" style={{ height: '400px' }}>
-              <Image 
-                src="/images/personalB.jpg"
-                alt="Personal Branding Illustration"
-                layout="fill"
-                objectFit="cover"
-                className="rounded-lg"
+          <div className="flex flex-col lg:flex-row items-center">
+            <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
+              <Image
+                src="/images/reach.png"
+                alt="Reach Inc Logo"
+                width={300}
+                height={100}
+                className="mb-8"
               />
-            </div>
-            <div className="w-full lg:w-1/2 lg:pl-12">
-              <h2 className="text-3xl font-semibold mb-6 text-gray-800 dark:text-white">La méthode French Touch</h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Notre approche unique allie l&apos;élégance française à des stratégies de Personal Branding innovantes. Développez une identité professionnelle authentique et impactante.
+              <h2 className="text-3xl font-bold mb-4">REACH INC - CPBS</h2>
+              <p className="text-gray-300 mb-6">
+                William Arruda, leader mondial et expert reconnu en Personal Branding, est fondateur de Reach
+                Inc. et auteur de la méthode Reach Personal Branding, créée en 2001. Personal Branding France
+                est partenaire co-exclusif de Reach Inc. pour l&apos;enseignement de Certificat Personal Branding
+                Strategist (CPBS) dans l&apos;ensemble des pays francophones, suite à un contrat signé en 2006 entre
+                Béatrice Cuvelier et William Arruda.
               </p>
-              <ul className="space-y-4">
-                {frenchTouchBenefits.map((benefit, index) => (
-                  <motion.li 
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="flex items-center text-gray-700 dark:text-gray-300"
-                  >
-                    <benefit.icon className="w-6 h-6 text-blue-500 mr-2" />
-                    <span><strong>{benefit.title}:</strong> {benefit.description}</span>
-                  </motion.li>
-                ))}
-              </ul>
+            </div>
+            <div className="w-full lg:w-1/2 lg:pl-12 flex flex-col items-center justify-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-center"
+              >
+                <h3 className="text-5xl font-extrabold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-500">
+                  Where
+                </h3>
+                <h3 className="text-6xl font-black mb-2 text-white">
+                  Branding
+                </h3>
+                <h3 className="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-yellow-400">
+                  Gets Personal
+                </h3>
+              </motion.div>
             </div>
           </div>
         </div>
-      </section>
+      </motion.div>
+    </Link>
+      </div>
+      
+    </div>
+    <VideoSection />
+    <LeadershipCardsSection/>
 
       <section className="py-16 bg-blue-600 dark:bg-blue-800 text-white">
         <div className="container mx-auto px-4 text-center">

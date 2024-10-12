@@ -9,13 +9,16 @@ import { ThemeToggle } from './ThemeToggle';
 
 const menuItems = [
   { name: 'Accueil', path: '/' },
-  { name: 'Personal Branding', path: '/personal-branding' },
   { name: 'Brand Solution', path: '/brand-reputation', subItems: [
+    { name: 'Brand E-Reputation', path: '/notre-expertise' },
+    { name: 'Perspnal Branding', path: '/personal-branding' },
     { name: 'Audit E-Reputation', path: '/audit-reputation' },
-    { name: 'Brand E-Reputation', path: '/brand-reputation' },
+    { name: 'Brand 360', path: '/brand-reputation' },
   ]},
   { name: 'Contact', path: '/#contact' },
   { name: 'Blog', path: '/blog' },
+  { name: 'My Account', path: '/account' },
+
 ];
 
 export default function Header() {

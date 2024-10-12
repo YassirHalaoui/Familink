@@ -1,4 +1,3 @@
-'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Headset, Users, Building } from 'lucide-react';
@@ -18,7 +17,9 @@ const PricingSection = () => {
         "Support par email"
       ],
       color: "bg-blue-100 dark:bg-blue-900",
-      buttonColor: "bg-blue-500 hover:bg-blue-600 text-white"
+      buttonColor: "bg-blue-500 hover:bg-blue-600 text-white",
+      emailSubject: "Demande d'information - Plan En ligne",
+      emailBody: "Bonjour,\n\nJe suis intéressé(e) par votre plan En ligne à 200 MAD par heure. Pouvez-vous me fournir plus d'informations sur ce service ?\n\nMerci d'avance,\n[Votre nom]"
     },
     {
       title: "Individuel",
@@ -34,7 +35,9 @@ const PricingSection = () => {
       ],
       color: "bg-purple-100 dark:bg-purple-900",
       buttonColor: "bg-purple-500 hover:bg-purple-600 text-white",
-      featured: true
+      featured: true,
+      emailSubject: "Demande d'information - Plan Individuel",
+      emailBody: "Bonjour,\n\nJe souhaite en savoir plus sur votre plan Individuel à 300 MAD par heure. Pouvez-vous me détailler les services inclus dans ce plan ?\n\nCordialement,\n[Votre nom]"
     },
     {
       title: "Professionnel",
@@ -49,9 +52,17 @@ const PricingSection = () => {
         "Assistance personnalisée"
       ],
       color: "bg-green-100 dark:bg-green-900",
-      buttonColor: "bg-green-500 hover:bg-green-600 text-white"
+      buttonColor: "bg-green-500 hover:bg-green-600 text-white",
+      emailSubject: "Demande d'information - Plan Professionnel",
+      emailBody: "Bonjour,\n\nJe suis intéressé(e) par votre plan Professionnel à 500 MAD par heure. Pouvez-vous me donner plus de détails sur les services de gestion de crise et de surveillance de réputation inclus ?\n\nBien cordialement,\n[Votre nom]"
     },
   ];
+
+  const handleEmailClick = (plan) => {
+    const subject = encodeURIComponent(plan.emailSubject);
+    const body = encodeURIComponent(plan.emailBody);
+    window.location.href = `mailto:contact@famalink.com?subject=${subject}&body=${body}`;
+  };
 
   return (
     <section className="py-20 bg-gray-50 dark:bg-gray-900">
@@ -91,14 +102,12 @@ const PricingSection = () => {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href="https://calendly.com/famalink/45min"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={() => handleEmailClick(plan)}
                   className={`w-full py-3 px-4 rounded-lg font-semibold transition-colors duration-200 ${plan.buttonColor} text-center`}
                 >
-                  Je prends un rendez-vous
-                </a>
+                  Contacter pour plus d&apos;infos
+                </button>
               </div>
             </motion.div>
           ))}

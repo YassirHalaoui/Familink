@@ -12,7 +12,6 @@ export default function Home() {
     <main className="overflow-hidden">
       <HeroSection />
       <ServicesSection />
-      <VideoSection />
       <ExpertiseSection />
       <EmployeeAdvocacySection />
       <LeadershipSection />
